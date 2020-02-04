@@ -36,14 +36,10 @@ class InstagramBot:
         for link in links:
             bot.get(link)
             try:
-                bot.find_element_by_class_name('_8-yf5').click()
-                #bot.find_element_by_class_name('_15y0l').find_element_by_class_name('_8-yf5').click()
-                #bot.find_element_by_class_name('sH9wk').find_element_by_class_name('Ypffh').send_keys('Awesome post, check out my page!!')
-                #bot.find_element_by_class_name('sH9wk').find_element_by_class_name('sqdOP').click()
-                time.sleep(2+random.randInt(0,5))
+                bot.find_element_by_class_name('_8-yf5').click() #class name may change, find the apt class name by inspecting instagram website
             except Exception as e:
                 time.sleep(5)
         
-ap = InstagramBot("reednuprebma", "Kratos4@")
+ap = InstagramBot("USERNAME", "PASSWORD")
 ap.login()
-ap.like_post('fitness')
+ap.like_post('fitness') #whatever tags posts you want to like
